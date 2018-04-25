@@ -1,0 +1,6 @@
+type Blog {
+  id: Int!
+  title: String!
+  body: String!
+  comments: [Comment]
+}

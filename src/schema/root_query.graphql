@@ -1,0 +1,13 @@
+type Query {
+  blog(id: Int!): Blog!
+  comments: [Comment]
+}
+
+type Mutation {
+  createBlog(title: String!, body: String!): Blog
+}
+
+schema {
+  query: Query,
+  mutation: Mutation
+}
