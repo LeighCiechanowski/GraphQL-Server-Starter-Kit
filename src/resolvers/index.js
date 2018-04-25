@@ -1,13 +1,13 @@
 import BlogQuery from './blog/blog-query';
 import BlogMap from './blog/blog-map';
-//import BlogMutation from './reaction/reaction-mutation';
+import CommentMutation from './comment/comment-mutation';
 
 export default {
   Query: {
     ...BlogQuery,
   },
   Mutation: {
-    //...BlogMutation,
+    ...CommentMutation,
   },
   Blog: BlogMap,
 };
