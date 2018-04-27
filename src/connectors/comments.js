@@ -8,8 +8,8 @@ let comments = [{
 
 export const getComments = async (id) => {
   try {
-    //const { data } = await axios.get(`${config.api.blog.url}/${id}`);
-    let data = comments;
+    const { data } = await axios.get(`${config.api.comments.url}/comments/${id}`);
+    // let data = comments;
     return data;
   } catch (error) {
     console.log(error); /* eslint-disable-line */

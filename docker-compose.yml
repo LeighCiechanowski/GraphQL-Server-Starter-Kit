@@ -6,6 +6,7 @@ services:
       - PORT=4000
       - NODE_ENV=production
       - BLOG_API_URL=http://scaffold-graph-mountebank:5001
+      - COMMENTS_URL=http://scaffold-graph-mountebank:5001
       - TEST_MODE=true
     build:
       context: .

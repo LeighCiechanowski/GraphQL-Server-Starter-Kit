@@ -7,7 +7,11 @@ describe('Blog Queries', () => {
         blog(id: 1) { 
           id, 
           title, 
-          body
+          body,
+          comments { 
+            id, 
+            body 
+          }
         } 
       }
     `;
@@ -18,7 +22,13 @@ describe('Blog Queries', () => {
       blog: {
         id: 1,
         title: "test blog",
-        body: "test body"
+        body: "test body",
+        comments: [
+        {
+          id: 1,
+          body: "test body"
+        }
+      ]
       }
     }
     );

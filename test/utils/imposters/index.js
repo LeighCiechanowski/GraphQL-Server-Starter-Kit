@@ -1,3 +1,4 @@
 import blogImposter from './blog';
+import commentsImposter from './comments';
 
-export default [blogImposter];
+export default [blogImposter, commentsImposter];
