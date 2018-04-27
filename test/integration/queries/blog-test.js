@@ -4,14 +4,10 @@ describe('Blog Queries', () => {
   test('Should return a blog', async () => {
     const blogQuery = `
       query { 
-        blog(id: 1234) { 
+        blog(id: 1) { 
           id, 
           title, 
-          body, 
-          comments { 
-            id, 
-            body 
-          } 
+          body
         } 
       }
     `;
@@ -22,13 +18,7 @@ describe('Blog Queries', () => {
       blog: {
         id: 1,
         title: "test blog",
-        body: "test body",
-        comments: [
-          {
-            id: 1,
-            body: "test body"
-          }
-        ]
+        body: "test body"
       }
     }
     );

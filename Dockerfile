@@ -4,7 +4,7 @@ WORKDIR /source
 
 COPY . /source
 
-EXPOSE 5000
+EXPOSE 4000
 
 #RUN npm run lint
 
