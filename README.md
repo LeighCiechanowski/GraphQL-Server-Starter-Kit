@@ -25,6 +25,27 @@ With Docker installed, use `docker-compose up --build` to run the tests.
 
 For more information on tests, see the test wiki page.
 
+## Sending GraphQL Queries
+
+Try hitting the GraphQL server with Postman.
+
+
+Post the following to `http://localhost:3005/`
+
+To get blog with ID 1 and all it's comments
+
+```javascript
+{
+   "query": "query { blog(id: 1) { id, title, body, comments { id, body } } }"
+}
+```
+
+To post a comment to blog id 1
+```javascript
+{
+	"query": "mutation { createComment(blogId: 1, body: \"test comment\") { id, body }}"
+}
+```
 ## Architecture
 To give you some context here is how this GraphQL server instance would fit into a wider microservices based platform.
 

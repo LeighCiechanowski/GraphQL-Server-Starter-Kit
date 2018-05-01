@@ -1,15 +1,10 @@
 import axios from 'axios';
 import config from '../config';
 
-let comments = [{
-  id: 1,
-  body: 'test body'
-}];
-
 export const getComments = async (id) => {
+  // Would need to send blog ID in real implementation
   try {
-    const { data } = await axios.get(`${config.api.comments.url}/comments/${id}`);
-    // let data = comments;
+    const { data } = await axios.get(`${config.api.comments.url}/Comments/`);
     return data;
   } catch (error) {
     console.log(error); /* eslint-disable-line */
@@ -17,11 +12,17 @@ export const getComments = async (id) => {
 };
 
 export const createComment = async (blogId, body) => {
+  // Would need to send blog ID in real implementation
   try {
-    let comment = { id: comments.length + 1, body };
-    comments.push(comment)
-    return comment;
+    const { data } = await axios.post(
+      `${config.api.comments.url}/Comments/`,
+      {
+        body,
+      }
+    );
+
+    return data;
   } catch (error) {
-    console.log(error);
+    console.log(error); /* eslint-disable-line */
   }
 }

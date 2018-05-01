@@ -3,12 +3,8 @@ import config from '../config';
 
 export const getBlog = async (id) => {
   try {
-    const { data } = await axios.get(`${config.api.blog.url}/blog/${id}`);
-    // let data = {
-    //     id: 1,
-    //     title: 'test blog',
-    //     body: 'test body'
-    // }
+    const { data } = await axios.get(`${config.api.blog.url}/Blog/${id}`);
+    
     return data;
   } catch (error) {
     console.log(error); /* eslint-disable-line */
