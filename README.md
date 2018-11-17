@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/410358/48665466-b495ff80-eaa6-11e8-8c5d-1f9b9b1cd007.png"/>
+</p>
+
 # Starter Kit for a Production Ready* GraphQL Server Instance
 
 ## Introduction
